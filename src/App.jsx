@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
-
-// API: https://breaking-bad-quotes.herokuapp.com/v1/quotes
 
 const Contenedor = styled.div`
 	display: flex;
@@ -21,9 +19,20 @@ const Button = styled.button`
 `;
 
 function App() {
+	const [frase, setFrase] = useState({
+		quote: '',
+		author: '',
+	});
+
+	const consultarApi = async () => {
+		const promise = await fetch('https://breaking-bad-quotes.herokuapp.com/v1/quotes');
+		const frase = await promise.json();
+		setFrase(frase[0]);
+	};
+
 	return (
 		<Contenedor>
-			<Button>Obtener Frase</Button>
+			<Button onClick={consultarApi}>Obtener Frase</Button>
 		</Contenedor>
 	);
 }
