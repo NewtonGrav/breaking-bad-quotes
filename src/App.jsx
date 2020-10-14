@@ -5,11 +5,12 @@ import Frase from './components/Frase';
 const Contenedor = styled.div`
 	display: flex;
 	align-items: center;
-	margin-top: 5rem;
+	margin-top: 7rem;
 	flex-direction: column;
 `;
 
 const Button = styled.button`
+	margin-top: 2rem;
 	padding: 1rem 3rem;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 2rem;
