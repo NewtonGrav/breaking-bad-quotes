@@ -16,7 +16,13 @@ const Button = styled.button`
 	border: 2px solid black;
 	color: white;
 	background: -webkit-linear-gradient(top left, #007d35 0%, #007d35 40%, #0f574e 100%);
-	background-size: 300px;
+	background-size: 350px;
+	transition: background-size 0.6s ease;
+
+	:hover {
+		cursor: pointer;
+		background-size: 500px;
+	}
 `;
 
 function App() {
@@ -28,8 +34,6 @@ function App() {
 	useEffect(() => {
 		consultarApi();
 	}, []);
-
-	// TODO Generar frase al inciar la app(UseEffect)
 
 	const consultarApi = async () => {
 		const promise = await fetch('https://breaking-bad-quotes.herokuapp.com/v1/quotes');
