@@ -4,11 +4,11 @@ import styled from '@emotion/styled';
 const ContenedorFrase = styled.div`
 	padding: 3rem;
 	border-radius: 0.5rem;
-	background-color: white;
+	background-color: hsla(255, 100%, 100%, 0.8);
 	max-width: 800px;
 
 	@media (min-width: 992px) {
-		margin-top: 10rem;
+		margin-top: 8rem;
 	}
 
 	h1 {
@@ -27,13 +27,13 @@ const ContenedorFrase = styled.div`
 		}
 	}
 
-  p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.6rem;
-    text-align: right;
-    color: #666;
-    margin-top: 2rem;
-  }
+	p {
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-size: 1.6rem;
+		text-align: right;
+		color: #666;
+		margin-top: 2rem;
+	}
 `;
 
 const Frase = ({ frase }) => {
